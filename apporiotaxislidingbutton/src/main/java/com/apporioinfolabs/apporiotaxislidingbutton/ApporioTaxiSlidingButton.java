@@ -26,7 +26,7 @@ public class ApporioTaxiSlidingButton extends LinearLayout {
     private static final String TAG = "ApporioTaxiSlidingButto";
     private SlideToActView slideToActView;
     private LinearLayout loading_layout ;
-    private TextView strict_button, cancel_button ;
+    private TextView strict_button, cancel_button, loading_text ;
     private OnTaxiSlidngListener onTaxiSlidngListener ;
     private boolean cancelVisibility = false ;
 
@@ -71,6 +71,7 @@ public class ApporioTaxiSlidingButton extends LinearLayout {
             loading_layout = findViewById(R.id.loading_layout);
             strict_button = findViewById(R.id.strict_button);
             cancel_button = findViewById(R.id.cancel_button);
+            loading_text = findViewById(R.id.loading_text);
 
           slideToActView.setOnSlideCompleteListener(new SlideToActView.OnSlideCompleteListener() {
               @Override
@@ -123,7 +124,8 @@ public class ApporioTaxiSlidingButton extends LinearLayout {
         slideToActView.setText(""+displayText);
         strict_button.setText(""+displayText);
     }
-    public void startLoading(){
+    public void startLoading(String loadingText){
+        loading_text.setText(""+loadingText);
         slideToActView.setVisibility(GONE);
         strict_button.setVisibility(GONE);
         cancel_button.setVisibility(GONE);

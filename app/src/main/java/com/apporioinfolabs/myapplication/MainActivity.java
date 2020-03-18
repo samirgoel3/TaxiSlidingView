@@ -27,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAction() {
                 Toast.makeText(MainActivity.this, "Completed", Toast.LENGTH_SHORT).show();
-                appoio_taxi_sliding_button.startLoading();
+                appoio_taxi_sliding_button.startLoading("Doing this action now");
             }
 
             @Override
             public void onCancel() {
                 Toast.makeText(MainActivity.this, "on Cancel clicked", Toast.LENGTH_SHORT).show();
-                appoio_taxi_sliding_button.startLoading();
+                appoio_taxi_sliding_button.startLoading("Cancelling now");
             }
         });
 
