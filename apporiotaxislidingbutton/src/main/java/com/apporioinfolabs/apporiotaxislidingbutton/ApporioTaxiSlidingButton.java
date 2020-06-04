@@ -1,6 +1,7 @@
 package com.apporioinfolabs.apporiotaxislidingbutton;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -141,6 +142,23 @@ public class ApporioTaxiSlidingButton extends LinearLayout {
         if(cancelVisibility){ cancel_button.setVisibility(VISIBLE); }
         else{ cancel_button.setVisibility(GONE); }
     }
+
+    public void setButtonColour(String colour){
+        slideToActView.setOuterColor(Color.parseColor("#"+colour));
+        strict_button.setBackgroundColor(Color.parseColor("#"+colour));
+
+    }
+    public void setButtonColour(int colour){
+        slideToActView.setOuterColor(colour);
+        strict_button.setBackgroundColor(colour);
+    }
+
+    public void setLoadingColour(String color){
+        loading_layout.setBackgroundColor(Color.parseColor("#"+color));
+    }
+
+
+
 
     public void setListeners(OnTaxiSlidngListener onTaxiSlidngListener){
         this.onTaxiSlidngListener = onTaxiSlidngListener ;

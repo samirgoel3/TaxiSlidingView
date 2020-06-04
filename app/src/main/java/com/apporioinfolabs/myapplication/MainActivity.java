@@ -20,8 +20,10 @@ public class MainActivity extends AppCompatActivity {
         appoio_taxi_sliding_button = findViewById(R.id.appoio_taxi_sliding_button);
 
         appoio_taxi_sliding_button.setText("Hello Apporio");
-        appoio_taxi_sliding_button.setButtonType(ApporioTaxiSlidingButton.SLIDING_BUTTON);
+        appoio_taxi_sliding_button.setButtonType(ApporioTaxiSlidingButton.STRICT_BUTTON);
         appoio_taxi_sliding_button.setCancelable(true);
+        appoio_taxi_sliding_button.setButtonColour("000000");
+        appoio_taxi_sliding_button.setLoadingColour("ffbbbb");
 
         appoio_taxi_sliding_button.setListeners(new ApporioTaxiSlidingButton.OnTaxiSlidngListener() {
             @Override
