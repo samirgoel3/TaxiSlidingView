@@ -11,7 +11,7 @@
         android:id="@+id/cancel_button"
         android:background="@drawable/round_corner_red"
         android:layout_gravity="center"
-        android:text="Cancel"
+        android:text="@string/cancel"
         android:textColor="@color/white"
         android:gravity="center"
         android:paddingLeft="20dp"

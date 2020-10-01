@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ApporioTaxiSlidingButton</string>
+    <string name="cancel">Cancel</string>
 </resources>
